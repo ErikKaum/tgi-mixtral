@@ -7,7 +7,7 @@ from potassium import Potassium, Request, Response
 cmd = "text-generation-launcher --model-id TheBloke/dolphin-2.5-mixtral-8x7b-GPTQ"
 process = subprocess.Popen(cmd, shell=True)
 
-app = Potassium("server", experimental_num_workers=10)
+app = Potassium("server", experimental_num_workers=1)
 
 @app.init
 def init():
